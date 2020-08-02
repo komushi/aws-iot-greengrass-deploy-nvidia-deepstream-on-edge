@@ -31,7 +31,7 @@ my_platform = platform.platform()
 def send_heart_beat():
     client.publish(
         topic='greengrass-deepstream-app/heartbeat',
-        payload='Heart beat signal sent from '
+        payload='RTSP Heart beat signal sent from '
                 'Greengrass Core running on platform: {}'
                 .format(my_platform))
     Timer(60, send_heart_beat).start()
@@ -40,7 +40,7 @@ def send_heart_beat():
 
 def jetson_deepstream_run():
     send_heart_beat()
-    bash_command = "./deepstream-app -c ./source1_usb_dec_infer_resnet_int8.txt"
+    bash_command = "./deepstream-app -c ./source1_csi_dec_infer_resnet_fp16_localpath.txt"
     process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
     print(output, error)

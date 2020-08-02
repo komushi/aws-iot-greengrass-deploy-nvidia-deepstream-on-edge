@@ -89,7 +89,7 @@ sudo tar xpvf <DOWNLOAD_PATH>/deepstream_sdk_<VERSION>_jetson.tbz2
 ### Step 6: Prepare DeepStream Application to be deployed
 Once we upload the model, we also need to prepare a DeepStream package to be deployed with Greengrass. We are going to use DeepStream sample app on your Jetson device for this demonstration:
 ```
-scp <YOUR_JETSON_USERNAME>@<YOUR_JETSON_IP>:<ABSOLUTE_DEEPSTREAM_PATH>/sources/apps/sample_apps/deepstream-app/* $GG_DEPLOYMENT_HOME/formation_cf_script/lambda_deepstream_app/
+cp $GG_DEPLOYMENT_HOME/deepstream-source/opt/nvidia/deepstream/deepstream-5.0/bin/* $GG_DEPLOYMENT_HOME/formation_cf_script/lambda_deepstream_app/
 ```
 
 ### Step 7: Prepare corresponding configuration files for DeepStream Application

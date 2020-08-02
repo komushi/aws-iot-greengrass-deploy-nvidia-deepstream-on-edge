@@ -1,3 +1,10 @@
+aws-greengrass-core-sdk-python/
 deepstream-source/
 provisioning_cf_script/provision-packaged.yaml
+formation_cf_script/form-greengrass_modules-packaged.yaml
+formation_cf_script/lambda_deepstream_app/Primary_Detector/
+formation_cf_script/lambda_deepstream_app/greengrasssdk/
+formation_cf_script/lambda_deepstream_app/deepstream*
+
+deepstream_sdk_v5.0.0_jetson.tbz2
 output.txt
